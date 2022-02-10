@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export default class News extends Component {
   static defaultProps = {
     country: "in",
-    pageSize: 8,
+    pageSize: 9,
     category: "general",
   };
 
@@ -20,12 +20,12 @@ export default class News extends Component {
     this.state = {
       articles: [],
       loading: true,
-      page: 1,
+      page: 1
     };
   }
 
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3d426759aa6540d9b58e74b6fd9e1dd2&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=117f123c1b5b41c29a56da9a67668af1&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -33,7 +33,7 @@ export default class News extends Component {
   }
 
   handlePrevClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=117f123c1b5b41c29a56da9a67668af1&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
 
     this.setState({ loading: true });
     let data = await fetch(url);
@@ -45,7 +45,7 @@ export default class News extends Component {
     });
   };
   handleNextClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=117f123c1b5b41c29a56da9a67668af1&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -68,7 +68,8 @@ export default class News extends Component {
               this.state.articles.map((element) => {
                 return (
                   <div className="col-lg-4" key={element.url}>
-                    <NewsItems title={element.title} description={element.description} imgUrl={element.urlToImage} sourceUrl={element.url} />
+                    <NewsItems title={element.title} description={element.description} imgUrl={element.urlToImage} sourceUrl={element.url} source = {element.source.name} 
+                    time = {element.publishedAt} author = {element.author} />
                   </div>
                 );
               })}
