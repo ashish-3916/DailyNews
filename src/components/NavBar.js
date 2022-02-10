@@ -57,6 +57,26 @@ export default class NavBar extends Component {
                 </li>
               </ul>
             </div>
+
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            India
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">India</a></li>
+            <li><a class="dropdown-item" href="#">United States</a></li>
+            <li><a class="dropdown-item" href="#">England</a></li>
+            <li><a class="dropdown-item" href="#">Russia</a></li>
+            <li><a class="dropdown-item" href="#">China</a></li>
+            <li><a class="dropdown-item" href="#">UAE</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
           </div>
         </nav>
       </div>
