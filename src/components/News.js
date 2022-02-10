@@ -29,6 +29,7 @@ export default class News extends Component {
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
+    console.log(parsedData);
     this.setState({ articles: parsedData.articles, loading: false, totalResults: parsedData.totalResults });
   }
 
@@ -64,8 +65,8 @@ export default class News extends Component {
           </h2>
           {this.state.loading && <Loading />}
           <div className="row my-3">
-            {!this.state.loading &&
-              this.state.articles.map((element) => {
+            {!this.state.loading && 
+            this.state.articles.map((element) => {
                 return (
                   <div className="col-lg-4" key={element.url}>
                     <NewsItems title={element.title} description={element.description} imgUrl={element.urlToImage} sourceUrl={element.url} source = {element.source.name} 

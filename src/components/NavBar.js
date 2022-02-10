@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 export default class NavBar extends Component {
+  // handleChange = (event) => {
+  //   console.log(event.target.value);
+  //   this.props.handleSelect(event.target.value);
+  // }
   render() {
     return (
       <div>
@@ -58,25 +62,14 @@ export default class NavBar extends Component {
               </ul>
             </div>
 
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            India
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">India</a></li>
-            <li><a class="dropdown-item" href="#">United States</a></li>
-            <li><a class="dropdown-item" href="#">England</a></li>
-            <li><a class="dropdown-item" href="#">Russia</a></li>
-            <li><a class="dropdown-item" href="#">China</a></li>
-            <li><a class="dropdown-item" href="#">UAE</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-
+            {/* <select className="form-select" style ={{width : "10rem" ,color:"#edf1f5", backgroundColor :"#343a40" }} aria-label="Default select example" onChange={this.handleChange} >
+              <option value="India">India</option>
+              <option value="UnitedStates">United States</option>
+              <option value="England">England</option>
+              <option value="Russia">Russia</option>
+              <option value="China">China</option>
+              <option value="UAE">UAE</option>
+            </select> */}
           </div>
         </nav>
       </div>
