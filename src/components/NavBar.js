@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 export default class NavBar extends Component {
-  // handleChange = (event) => {
-  //   console.log(event.target.value);
-  //   this.props.handleSelect(event.target.value);
-  // }
+  handleChange = (event) => {
+    this.props.handleSelect(event.target.value);
+  }
   render() {
     return (
       <div>
@@ -61,15 +60,14 @@ export default class NavBar extends Component {
                 </li>
               </ul>
             </div>
-
-            {/* <select className="form-select" style ={{width : "10rem" ,color:"#edf1f5", backgroundColor :"#343a40" }} aria-label="Default select example" onChange={this.handleChange} >
+            <select className="form-select" style ={{width : "10rem" ,color:"#edf1f5", backgroundColor :"#343a40" }} aria-label="Default select example" onChange={this.handleChange} >
               <option value="India">India</option>
               <option value="UnitedStates">United States</option>
-              <option value="England">England</option>
+              <option value="UnitedKingdom">United Kingdom</option>
               <option value="Russia">Russia</option>
               <option value="China">China</option>
               <option value="UAE">UAE</option>
-            </select> */}
+            </select>
           </div>
         </nav>
       </div>
