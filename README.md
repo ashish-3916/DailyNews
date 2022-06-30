@@ -1,3 +1,6 @@
+
+![](https://github.com/ashish-3916/DailyNews/blob/main/src/images/news.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
